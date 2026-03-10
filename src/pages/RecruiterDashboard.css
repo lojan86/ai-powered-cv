@@ -1,0 +1,191 @@
+.recruiter-page {
+  padding: var(--space-10) 0 var(--space-16);
+}
+
+.rec-header {
+  margin-bottom: var(--space-8);
+}
+
+.rec-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  margin-bottom: var(--space-2);
+}
+
+.rec-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+.rec-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.rec-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  color: var(--primary-400);
+}
+
+/* Filters */
+.rec-filters {
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.search-bar {
+  position: relative;
+  margin-bottom: var(--space-4);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-input {
+  padding-left: 44px !important;
+  width: 100%;
+}
+
+.filter-row {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-select-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+}
+
+.filter-select-wrap .form-select {
+  min-width: 150px;
+}
+
+.results-count {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* Candidate Cards */
+.candidate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-6);
+}
+
+.candidate-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.candidate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.candidate-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: var(--font-size-lg);
+  color: white;
+}
+
+.bookmark-btn {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  padding: var(--space-1);
+}
+
+.bookmark-btn:hover {
+  color: var(--warning-400);
+}
+
+.bookmark-btn.bookmarked {
+  color: var(--warning-400);
+}
+
+.candidate-name {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.candidate-title {
+  font-size: var(--font-size-sm);
+  color: var(--primary-400);
+  font-weight: 500;
+}
+
+.candidate-location {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.candidate-summary {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.candidate-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.candidate-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  margin-top: auto;
+}
+
+.candidate-exp {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.candidate-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.candidate-actions .btn {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .rec-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .candidate-grid {
+    grid-template-columns: 1fr;
+  }
+}

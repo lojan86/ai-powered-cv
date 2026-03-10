@@ -1,0 +1,265 @@
+/* Resume Builder Styles */
+.builder {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.builder-topbar {
+  position: sticky;
+  top: var(--navbar-height);
+  background: rgba(15, 15, 26, 0.9);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-primary);
+  z-index: var(--z-sticky);
+  padding: var(--space-3) 0;
+}
+
+.builder-topbar-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.builder-title-wrap {
+  flex: 1;
+}
+
+.builder-title-input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.builder-title-input:focus {
+  background: var(--bg-glass);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.builder-topbar-actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.builder-layout {
+  display: flex;
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-16);
+}
+
+/* Sidebar */
+.builder-sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  position: sticky;
+  top: calc(var(--navbar-height) + 60px);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.sidebar-item:hover {
+  background: var(--bg-glass);
+  color: var(--text-primary);
+}
+
+.sidebar-item.active {
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--primary-400);
+}
+
+/* Editor */
+.builder-editor {
+  flex: 1;
+  min-width: 0;
+}
+
+.editor-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+}
+
+.editor-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.editor-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--primary-400);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.form-select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* Editor Item Cards */
+.editor-item-card {
+  margin-bottom: var(--space-4);
+}
+
+.item-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: var(--space-4);
+}
+
+.item-card-header h4 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+}
+
+.item-card-sub {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-top: var(--space-1);
+}
+
+.item-card-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+}
+
+.item-card-body {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Skills Editor Grid */
+.skills-editor-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skill-edit-item {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.skill-edit-item .form-input {
+  flex: 1;
+}
+
+.danger-icon {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.danger-icon:hover {
+  color: var(--danger-400);
+}
+
+/* Highlights */
+.highlights-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.highlight-row {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.highlight-row .form-input {
+  flex: 1;
+}
+
+/* Toggle */
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+  accent-color: var(--primary-500);
+  width: 16px;
+  height: 16px;
+}
+
+/* Cert edit */
+.cert-edit-item {
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .builder-layout {
+    flex-direction: column;
+  }
+
+  .builder-sidebar {
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: var(--space-2);
+    padding-bottom: var(--space-2);
+  }
+
+  .sidebar-item {
+    white-space: nowrap;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .builder-topbar-actions {
+    flex-wrap: wrap;
+  }
+
+  .skill-edit-item {
+    flex-wrap: wrap;
+  }
+}

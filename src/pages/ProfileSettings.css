@@ -1,0 +1,88 @@
+.settings-page {
+  padding: var(--space-10) 0 var(--space-16);
+}
+
+.settings-container {
+  max-width: 800px;
+}
+
+.settings-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  margin-bottom: var(--space-10);
+}
+
+.settings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.settings-card {
+  padding: var(--space-8);
+}
+
+.settings-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+  color: var(--primary-400);
+}
+
+.settings-card-header h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.settings-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.info-value {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  font-family: monospace;
+}
+
+.toggle-setting {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.toggle-setting input[type="checkbox"] {
+  accent-color: var(--primary-500);
+  width: 16px;
+  height: 16px;
+}
